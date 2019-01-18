@@ -53,6 +53,10 @@ const OSLoadingLabel = styled.h1`
   animation-delay: 2s;
 `;
 
+const OSLoadingVersion = styled.span`
+  font-size: 0.4em;
+`;
+
 const OSLoadingProgess = styled.div`
   border-radius: 5px;
   margin: 10px 0px;
@@ -68,7 +72,7 @@ class OSLoading extends Component {
   render() {
     return (
       <OSLoadingContainer>
-        <OSLoadingLabel>OS 1.0</OSLoadingLabel>
+        <OSLoadingLabel>OS<OSLoadingVersion> 1.0</OSLoadingVersion></OSLoadingLabel>
         <OSLoadingProgess />
       </OSLoadingContainer>
     );

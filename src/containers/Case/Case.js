@@ -44,7 +44,7 @@ class Case extends PureComponent {
   }
 
   handlePowerDown = () => {
-    const { powerState, turnOffPC, terminalOSPC } = this.props;
+    const { powerState, turnOffPC, terminalOSPC, hideWelcomeScene } = this.props;
     if (powerState === POWER_STATE.ON) {
       this.powerPressTimer = setTimeout(() => {
         this.setState({
@@ -53,17 +53,22 @@ class Case extends PureComponent {
           turnOffPC();
           clearTimeout(this.osLoadingTimer);
           terminalOSPC();
+          hideWelcomeScene();
         })
       }, 4000);
     }
   }
 
   handlePowerUp = () => {
-    const { powerState, turnOnPC, loadOSPC } = this.props;
+    const { powerState, turnOnPC, loadOSPC, showWelcomeScene, hideWelcomeScene } = this.props;
     if (!this.state.isOff && powerState !== POWER_STATE.ON) {
       turnOnPC();
       this.osLoadingTimer = setTimeout(() => {
         loadOSPC();
+        showWelcomeScene();
+        this.welcomeSceneTimer = setTimeout(() => {
+          hideWelcomeScene();
+        }, 3000);
       }, 7000);
     }
     clearTimeout(this.powerPressTimer);

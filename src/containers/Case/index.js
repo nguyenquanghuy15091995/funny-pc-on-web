@@ -5,7 +5,9 @@ import { createStructuredSelector } from 'reselect';
 import {
   loadOS,
   terminalOS,
-} from '../App/actions';
+  hideWelcome,
+  showWelcome,
+} from 'containers/App/actions';
 
 import Case from './Case';
 import {
@@ -26,6 +28,8 @@ function mapDispatchToProps(dispatch) {
     turnOnPC: bindActionCreators(turnOn, dispatch),
     loadOSPC: bindActionCreators(loadOS, dispatch),
     terminalOSPC: bindActionCreators(terminalOS, dispatch),
+    hideWelcomeScene: bindActionCreators(hideWelcome, dispatch),
+    showWelcomeScene: bindActionCreators(showWelcome, dispatch),
   };
 }
 
