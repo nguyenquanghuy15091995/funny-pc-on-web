@@ -4,7 +4,7 @@ const TopHeight = 50;
 const BotHeight = 40;
 
 export const PowerButton = styled.button`
-  background: transparent;
+  background-color: transparent;
   outline: none !important;
   border: none;
   border-radius: 50%;
@@ -51,6 +51,8 @@ export const BottomItem = styled.div`
   height: 5px;
   border-radius: 1000px;
   background-color: ${props => props.color ? props.color : 'rgba(255, 255, 255, 0.2)'};
+  box-shadow: 0px 0px 15px ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? props.color : 'transparent'};
+  ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? `filter: blur(1px);` : ''}
 `;
 
 export const ItemList = styled.div`
@@ -73,6 +75,10 @@ export const FansContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px 0px;
+`;
+
+export const FansLedView = styled.div`
+  ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? `filter: blur(2.5px);` : ''}
 `;
 
 const FansAnimationStart = keyframes`

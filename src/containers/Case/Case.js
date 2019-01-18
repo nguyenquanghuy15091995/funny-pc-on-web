@@ -14,6 +14,7 @@ import {
   USBContainer,
   BottomItem,
   PowerButton,
+  FansLedView,
 } from 'components/CaseView';
 
 import { POWER_STATE } from './constants';
@@ -94,10 +95,16 @@ class Case extends PureComponent {
           <USBContainer><USBIcon color={this.getLedColor()} /></USBContainer>
           <USBContainer><USBIcon color={this.getLedColor()} /></USBContainer>
         </TopCase>
-        <FansContainer>
-          <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
-          <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
-          <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
+        <FansContainer color={this.getLedColor()}>
+          <FansLedView color={this.getLedColor()}>
+            <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
+          </FansLedView>
+          <FansLedView color={this.getLedColor()}>
+            <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
+          </FansLedView>
+          <FansLedView color={this.getLedColor()}>
+            <FansIcon styledCSS={this.getFansCSS()} color={this.getLedColor()} size={100} />
+          </FansLedView>
         </FansContainer>
         <BottomCase>
           <BottomItem color={this.getLedColor()} />
