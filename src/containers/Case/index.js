@@ -8,7 +8,10 @@ import {
   hideWelcome,
   showWelcome,
 } from 'containers/App/actions';
-
+import {
+  hideDesktop,
+  showDesktop,
+} from '../Desktop/actions';
 import Case from './Case';
 import {
   makeSelectPowerState,
@@ -30,6 +33,8 @@ function mapDispatchToProps(dispatch) {
     terminalOSPC: bindActionCreators(terminalOS, dispatch),
     hideWelcomeScene: bindActionCreators(hideWelcome, dispatch),
     showWelcomeScene: bindActionCreators(showWelcome, dispatch),
+    hideDesktopScene: bindActionCreators(hideDesktop, dispatch),
+    showDesktopScene: bindActionCreators(showDesktop, dispatch),
   };
 }
 

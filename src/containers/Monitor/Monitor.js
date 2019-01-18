@@ -15,6 +15,8 @@ import {
 import OSLoading from 'components/OSLoading';
 import WelcomeScene from 'components/WelcomeScene';
 
+import Desktop from 'containers/Desktop';
+
 import {
   POWER_STATE,
 } from 'containers/Case/constants';
@@ -48,6 +50,7 @@ class Monitor extends PureComponent {
           <MonitorScreen>
             {!os.loaded && powerState === POWER_STATE.ON ? <OSLoading /> : null}
             {os.loaded && os.welcomeVisible ? <WelcomeScene /> : null}
+            <Desktop />
           </MonitorScreen>
           {monitorState === MONITOR_STATE.OFF ? <MonitorScreenOff /> : null}
           <MonitorPowerButton onClick={this.handleMonitorPower}>

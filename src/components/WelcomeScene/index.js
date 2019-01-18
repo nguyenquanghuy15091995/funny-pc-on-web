@@ -27,7 +27,7 @@ const LabelAnimation = keyframes`
 const WelcomeSceneLabel = styled.h1`
   color: transparent;
   text-align: center;
-  font-size: 4em;
+  font-size: 2.5em;
   font-weight: 700;
   width: 100%;
   margin: 10px 0px;
