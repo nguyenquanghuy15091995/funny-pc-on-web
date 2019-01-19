@@ -6,34 +6,33 @@ import {
   MenuItem,
   MenuItemLabel,
   TopbarContainer,
+  MenuItemActive,
+  MenuItemNormal,
 } from 'components/DesktopView';
 
 import DateTimeView from 'components/DateTimeView';
 
-import PowerIcon from 'icons/Power';
-import AppsIcon from 'icons/Apps';
-import SettingIcon from 'icons/Setting';
+import {
+  MENU_ITEMS,
+} from './constants';
 
 class Desktop extends PureComponent {
   render() {
-    const { visible } = this.props;
+    const { visible, currentMenuItemId, selectMenuItemId } = this.props;
     if (!visible) return null;
     return (
       <DesktopContainer>
         <TopbarContainer><DateTimeView /></TopbarContainer>
         <MainMenu>
-          <MenuItem>
-            <PowerIcon color="#d50000" size={30} />
-            <MenuItemLabel>Power</MenuItemLabel>
-          </MenuItem>
-          <MenuItem>
-            <AppsIcon color="#6200ea" size={30} />
-            <MenuItemLabel>Apps</MenuItemLabel>
-          </MenuItem>
-          <MenuItem>
-            <SettingIcon color="#424242" size={30} />
-            <MenuItemLabel>Setting</MenuItemLabel>
-          </MenuItem>
+          {
+            MENU_ITEMS.map((item) => (
+              <MenuItem onClick={() => selectMenuItemId(item.id)}>
+                {currentMenuItemId === item.id ? <MenuItemActive /> : <MenuItemNormal />}
+                {item.icon}
+                <MenuItemLabel>{item.name}</MenuItemLabel>
+              </MenuItem>
+            ))
+          }
         </MainMenu>
       </DesktopContainer>
     );

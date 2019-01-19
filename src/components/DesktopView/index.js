@@ -66,8 +66,12 @@ export const MenuItem = styled.div`
   animation-duration: 0.15s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  padding: 10px 10px 0px 10px;
+  padding: 0px 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-width: 100px;
   &:hover {
     text-decoration: underline;
@@ -79,8 +83,33 @@ export const MenuItemLabel = styled.div`
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: inherit;
+`;
+
+const MenuItemSelectAnimation = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+export const MenuItemActive = styled.div`
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin-bottom: 3px;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation-name: ${MenuItemSelectAnimation};
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+`;
+
+export const MenuItemNormal = styled.div`
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  margin-bottom: 3px;
+  background-color: transparent;
 `;
 
 const TopBarAnimation = keyframes`

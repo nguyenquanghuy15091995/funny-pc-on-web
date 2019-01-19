@@ -1,6 +1,7 @@
 import {
   HIDE_DESKTOP,
   SHOW_DESKTOP,
+  SELECT_MENU_ITEM,
 } from './constants';
 
 export function hideDesktop() {
@@ -12,5 +13,12 @@ export function hideDesktop() {
 export function showDesktop() {
   return {
     type: SHOW_DESKTOP,
+  };
+}
+
+export function selectMenuItem(itemId) {
+  return {
+    type: SELECT_MENU_ITEM,
+    menuItemId: itemId,
   };
 }
