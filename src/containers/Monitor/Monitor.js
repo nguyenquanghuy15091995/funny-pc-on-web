@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import PowerIcon from 'icons/Power';
+import { WHITE_LED } from 'utils/colors';
 
 import {
   MonitorContainer,
@@ -28,9 +29,9 @@ import {
 class Monitor extends PureComponent {
   getPowerColor = () => {
     if (this.props.monitorState === MONITOR_STATE.ON) {
-      return 'rgba(255, 255, 255, 0.8)';
+      return WHITE_LED.ON;
     }
-    return 'rgba(255, 255, 255, 0.2)';
+    return WHITE_LED.OFF;
   }
 
   handleMonitorPower = () => {

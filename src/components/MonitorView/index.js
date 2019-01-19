@@ -45,7 +45,7 @@ export const MonitorScreen = styled.div`
 
 export const MonitorScreenOff = styled.div`
   background-image: linear-gradient(to right, #000, #424242, #000);
-  z-index: 10;
+  z-index: 100;
   transform: translate(-50%, -53%);
   ${ScreenCSS}
   width: 96%;

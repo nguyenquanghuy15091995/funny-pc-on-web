@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import { WHITE_LED } from 'utils/colors';
 
 const TopHeight = 50;
 const BotHeight = 40;
@@ -50,9 +51,9 @@ export const BottomItem = styled.div`
   width: 10%;
   height: 5px;
   border-radius: 1000px;
-  background-color: ${props => props.color ? props.color : 'rgba(255, 255, 255, 0.2)'};
-  box-shadow: 0px 0px 15px ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? props.color : 'transparent'};
-  ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? `filter: blur(1px);` : ''}
+  background-color: ${props => props.color ? props.color : WHITE_LED.OFF};
+  box-shadow: 0px 0px 15px ${props => props.color && props.color !== WHITE_LED.OFF ? props.color : 'transparent'};
+  ${props => props.color && props.color !== WHITE_LED.OFF ? `filter: blur(1px);` : ''}
 `;
 
 export const ItemList = styled.div`
@@ -78,7 +79,7 @@ export const FansContainer = styled.div`
 `;
 
 export const FansLedView = styled.div`
-  ${props => props.color && props.color !== 'rgba(255, 255, 255, 0.2)' ? `filter: blur(2.5px);` : ''}
+  ${props => props.color && props.color !== WHITE_LED.OFF ? `filter: blur(2px);` : ''}
 `;
 
 const FansAnimationStart = keyframes`

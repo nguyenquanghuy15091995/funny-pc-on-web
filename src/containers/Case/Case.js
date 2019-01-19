@@ -4,6 +4,8 @@ import PowerIcon from 'icons/Power';
 import USBIcon from 'icons/USB';
 import FansIcon from 'icons/Fans';
 
+import { WHITE_LED } from 'utils/colors';
+
 import {
   TopCase,
   BottomCase,
@@ -37,11 +39,11 @@ class Case extends PureComponent {
   getLedColor = () => {
     const { powerState } = this.props;
     if (powerState === POWER_STATE.ON) {
-      return 'rgba(255, 255, 255, 0.8)';
+      return WHITE_LED.ON;
     } else if (powerState === POWER_STATE.OFF) {
-      return 'rgba(255, 255, 255, 0.2)';
+      return WHITE_LED.OFF;
     }
-    return 'rgba(255, 255, 255, 0.2)';
+    return WHITE_LED.OFF;
   }
 
   handlePowerDown = () => {

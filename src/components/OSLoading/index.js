@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const LoaingAnimation = keyframes`
+const LoadingAnimation = keyframes`
   0% { background-color: #333; }
   10% { background-color: #3f51b5; }
   50% { background-color: #3f51b5; }
@@ -15,7 +15,7 @@ const OSLoadingContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  animation-name: ${LoaingAnimation};
+  animation-name: ${LoadingAnimation};
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

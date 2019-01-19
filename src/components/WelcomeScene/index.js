@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const LoaingAnimation = keyframes`
+const LoadingAnimation = keyframes`
   from { background-color: #3f51b5; }
   to { background-color: #311b92; }
 `;
@@ -13,7 +13,7 @@ const WelcomeSceneContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  animation-name: ${LoaingAnimation};
+  animation-name: ${LoadingAnimation};
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
