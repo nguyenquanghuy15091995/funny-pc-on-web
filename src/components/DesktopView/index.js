@@ -12,7 +12,7 @@ const LoadingAnimation = keyframes`
   70% { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${DesktopImg}'); }
   80% { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${DesktopImg}'); }
   90% { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${DesktopImg}'); }
-  100% { background-image: url('${DesktopImg}'); }
+  100% { background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${DesktopImg}'); }
 `;
 
 export const DesktopContainer = styled.div`
@@ -63,7 +63,7 @@ export const MenuItem = styled.div`
   cursor: pointer;
   animation-name: ${MenuItemAnimation};
   animation-delay: 1.25s;
-  animation-duration: 0.25s;
+  animation-duration: 0.15s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   padding: 10px 10px 0px 10px;
@@ -81,4 +81,26 @@ export const MenuItemLabel = styled.div`
   text-transform: uppercase;
   font-size: 1rem;
   text-decoration: inherit;
+`;
+
+const TopBarAnimation = keyframes`
+  from { height: 0px; }
+  to { height: 25px; }
+`;
+
+export const TopbarContainer = styled.div`
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+  height: 0px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: ${TopBarAnimation};
+  animation-delay: 1s;
+  animation-duration: 0.25s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 `;

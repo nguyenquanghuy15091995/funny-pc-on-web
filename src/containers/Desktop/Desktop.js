@@ -5,7 +5,10 @@ import {
   MainMenu,
   MenuItem,
   MenuItemLabel,
+  TopbarContainer,
 } from 'components/DesktopView';
+
+import DateTimeView from 'components/DateTimeView';
 
 import PowerIcon from 'icons/Power';
 import AppsIcon from 'icons/Apps';
@@ -17,6 +20,7 @@ class Desktop extends PureComponent {
     if (!visible) return null;
     return (
       <DesktopContainer>
+        <TopbarContainer><DateTimeView /></TopbarContainer>
         <MainMenu>
           <MenuItem>
             <PowerIcon color="#d50000" size={30} />
