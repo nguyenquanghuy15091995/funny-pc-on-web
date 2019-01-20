@@ -13,7 +13,7 @@ import {
   MonitorScreenOff,
 } from 'components/MonitorView';
 
-import OSLoading from 'components/OSLoading';
+import OSLoadingScene from 'components/OSLoadingScene';
 import WelcomeScene from 'components/WelcomeScene';
 import ShutdownScene from 'components/ShutdownScene';
 
@@ -50,7 +50,7 @@ class Monitor extends PureComponent {
       <MonitorContainer>
         <MonitorMain>
           <MonitorScreen>
-            {!os.loaded && powerState === POWER_STATE.ON ? <OSLoading /> : null}
+            {!os.loaded && powerState === POWER_STATE.ON ? <OSLoadingScene /> : null}
             {os.loaded && os.welcomeVisible ? <WelcomeScene /> : null}
             {os.loaded && os.shutingDown ? <ShutdownScene /> : null}
             <Desktop />

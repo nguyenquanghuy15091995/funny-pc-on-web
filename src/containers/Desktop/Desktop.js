@@ -15,6 +15,7 @@ import {
 import DateTimeView from 'components/DateTimeView';
 
 import PowerTab from 'containers/PowerTab';
+import SettingTab from 'containers/SettingTab';
 
 import {
   MENU_ITEMS,
@@ -37,6 +38,7 @@ class Desktop extends PureComponent {
         <ContentContainer>
           <ContentView>
             {MENU_ITEMS.POWER.id === currentMenuItemId ? <PowerTab /> : null}
+            {MENU_ITEMS.SETTING.id === currentMenuItemId ? <SettingTab /> : null}
           </ContentView>
         </ContentContainer>
         <MainMenu>

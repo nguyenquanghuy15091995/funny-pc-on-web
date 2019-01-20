@@ -18,7 +18,6 @@ import {
 
 import {
   turnOff,
-  turnOn,
 } from 'containers/Case/actions';
 
 import PowerTab from './PowerTab';
