@@ -5,12 +5,15 @@ import {
   TERMINAL_OS,
   HIDE_WELCOME,
   SHOW_WELCOME,
+  END_SHUT_DOWN,
+  START_SHUT_DOWN,
 } from './constants';
 
 const initState = fromJS({
   os: {
     loaded: false,
     welcomeVisible: false,
+    shutingDown: false,
   },
 });
 
@@ -24,6 +27,10 @@ function globalReducer(state = initState, action) {
       return state.setIn(['os', 'welcomeVisible'], false);
     case SHOW_WELCOME:
       return state.setIn(['os', 'welcomeVisible'], true);
+    case START_SHUT_DOWN:
+      return state.setIn(['os', 'shutingDown'], true);
+    case END_SHUT_DOWN:
+      return state.setIn(['os', 'shutingDown'], false);
     default:
       return state;
   }

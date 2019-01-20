@@ -75,6 +75,7 @@ export const MenuItem = styled.div`
   min-width: 100px;
   &:hover {
     text-decoration: underline;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
   }
 `;
 
@@ -85,6 +86,7 @@ export const MenuItemLabel = styled.div`
   text-transform: uppercase;
   font-size: 0.9rem;
   text-decoration: inherit;
+  user-select: none;
 `;
 
 const MenuItemSelectAnimation = keyframes`
@@ -97,7 +99,7 @@ export const MenuItemActive = styled.div`
   width: 7px;
   border-radius: 50%;
   margin-bottom: 3px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   animation-name: ${MenuItemSelectAnimation};
   animation-duration: 0.15s;
   animation-timing-function: linear;
@@ -132,4 +134,30 @@ export const TopbarContainer = styled.div`
   animation-duration: 0.25s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+`;
+
+const ContentContainerAnimation = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+export const ContentContainer = styled.div`
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 95px);
+  top: 25px;
+  left: 0;
+  animation-name: ${ContentContainerAnimation};
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ContentView = styled.div`
+  position: relative;
+  width: 100%;
 `;

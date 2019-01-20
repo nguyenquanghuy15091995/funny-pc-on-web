@@ -10,8 +10,13 @@ export const SHOW_DESKTOP = `${PREFIX}/SHOW_DESKTOP`;
 
 export const SELECT_MENU_ITEM = `${PREFIX}/SELECT_MENU_ITEM`;
 
-export const MENU_ITEMS = [
-  { id: 1, name: 'Power', icon: <PowerIcon color="#d50000" size={30} /> },
-  { id: 2, name: 'Apps', icon: <AppsIcon color="#6200ea" size={30} /> },
-  { id: 3, name: 'Setting', icon: <SettingIcon color="#424242" size={30} /> },
-];
+export const MENU_ITEMS = {
+  POWER: { id: 1, name: 'Power', icon: <PowerIcon color="#d50000" size={30} /> },
+  APPS: { id: 2, name: 'Apps', icon: <AppsIcon color="#6200ea" size={30} /> },
+  SETTING: { id: 3, name: 'Setting', icon: <SettingIcon color="#424242" size={30} /> },
+  ARRAY: [
+    { id: 1, name: 'Power', icon: <PowerIcon color="#d50000" size={30} /> },
+    { id: 2, name: 'Apps', icon: <AppsIcon color="#6200ea" size={30} /> },
+    { id: 3, name: 'Setting', icon: <SettingIcon color="#424242" size={30} /> },
+  ],
+};

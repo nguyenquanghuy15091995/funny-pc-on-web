@@ -3,6 +3,8 @@ import {
   TERMINAL_OS,
   HIDE_WELCOME,
   SHOW_WELCOME,
+  END_SHUT_DOWN,
+  START_SHUT_DOWN,
 } from './constants';
 
 export function loadOS() {
@@ -26,5 +28,17 @@ export function hideWelcome() {
 export function showWelcome() {
   return {
     type: SHOW_WELCOME,
+  };
+}
+
+export function startShutdown() {
+  return {
+    type: START_SHUT_DOWN,
+  };
+}
+
+export function endShutdown() {
+  return {
+    type: END_SHUT_DOWN,
   };
 }

@@ -15,6 +15,7 @@ import {
 
 import OSLoading from 'components/OSLoading';
 import WelcomeScene from 'components/WelcomeScene';
+import ShutdownScene from 'components/ShutdownScene';
 
 import Desktop from 'containers/Desktop';
 
@@ -51,6 +52,7 @@ class Monitor extends PureComponent {
           <MonitorScreen>
             {!os.loaded && powerState === POWER_STATE.ON ? <OSLoading /> : null}
             {os.loaded && os.welcomeVisible ? <WelcomeScene /> : null}
+            {os.loaded && os.shutingDown ? <ShutdownScene /> : null}
             <Desktop />
           </MonitorScreen>
           {monitorState === MONITOR_STATE.OFF ? <MonitorScreenOff /> : null}
