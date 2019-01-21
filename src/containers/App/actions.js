@@ -5,6 +5,7 @@ import {
   SHOW_WELCOME,
   END_SHUT_DOWN,
   START_SHUT_DOWN,
+  SELECT_SETTING_ITEM,
 } from './constants';
 
 export function loadOS() {
@@ -40,5 +41,12 @@ export function startShutdown() {
 export function endShutdown() {
   return {
     type: END_SHUT_DOWN,
+  };
+}
+
+export function selectSettingItem(id) {
+  return {
+    type: SELECT_SETTING_ITEM,
+    itemId: id,
   };
 }

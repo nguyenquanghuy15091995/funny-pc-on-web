@@ -156,8 +156,3 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const ContentView = styled.div`
-  position: relative;
-  width: 100%;
-`;

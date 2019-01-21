@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 
 export const PowerContainer = styled.div`
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;

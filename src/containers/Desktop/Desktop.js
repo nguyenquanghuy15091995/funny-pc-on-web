@@ -9,7 +9,6 @@ import {
   MenuItemActive,
   MenuItemNormal,
   ContentContainer,
-  ContentView,
 } from 'components/DesktopView';
 
 import DateTimeView from 'components/DateTimeView';
@@ -36,15 +35,13 @@ class Desktop extends PureComponent {
       <DesktopContainer>
         <TopbarContainer><DateTimeView /></TopbarContainer>
         <ContentContainer>
-          <ContentView>
             {MENU_ITEMS.POWER.id === currentMenuItemId ? <PowerTab /> : null}
             {MENU_ITEMS.SETTING.id === currentMenuItemId ? <SettingTab /> : null}
-          </ContentView>
         </ContentContainer>
         <MainMenu>
           {
             MENU_ITEMS.ARRAY.map((item) => (
-              <MenuItem onClick={() => this.handleMenuClick(item.id)}>
+              <MenuItem key={item.id} onClick={() => this.handleMenuClick(item.id)}>
                 {currentMenuItemId === item.id ? <MenuItemActive /> : <MenuItemNormal />}
                 {item.icon}
                 <MenuItemLabel>{item.name}</MenuItemLabel>
