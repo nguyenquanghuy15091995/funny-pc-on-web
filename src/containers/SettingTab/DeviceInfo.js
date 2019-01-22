@@ -14,7 +14,7 @@ class DeviceInfo extends Component {
         <Container fluid>
           <Row>
             <Col md={4} style={{ textAlign: 'right' }}>CPU</Col>
-            <Col md={8}>: i7-6969</Col>
+            <Col md={8}>: i69-6969</Col>
           </Row>
           <Row>
             <Col md={4} style={{ textAlign: 'right' }}>GPU</Col>

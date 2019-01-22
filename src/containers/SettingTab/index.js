@@ -7,6 +7,7 @@ import {
 } from 'containers/App/selectors';
 import {
   selectSettingItem,
+  selectCaseLed,
 } from 'containers/App/actions';
 
 import SettingTab from './SettingTab';
@@ -18,6 +19,7 @@ const mapStateToProps = createStructuredSelector({
 function mapDispatchToProps(dispatch) {
   return {
     doSelectSettingItem: bindActionCreators(selectSettingItem, dispatch),
+    selectCaseLedColor: bindActionCreators(selectCaseLed, dispatch),
   };
 }
 

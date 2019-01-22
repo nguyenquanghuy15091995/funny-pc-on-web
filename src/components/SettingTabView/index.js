@@ -111,3 +111,30 @@ export const DeviceInfoTitle = styled.div`
   font-size: 1.2rem;
   font-weight: 700;
 `;
+
+export const LedSelectButton = styled.button`
+  margin: 10px 0px;
+  outline: none !important;
+  cursor: pointer;
+  color:  ${props => props.selected ? '#333' : '#FFF'};
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 500px;
+  width: 100%;
+  min-width: 50px;
+  background-color: ${props => props.selected ? 'rgba(255, 255, 255, 0.7)' : '#333'};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border: 1px solid #FFF;
+  }
+`;
+
+export const ColorPoint = styled.div`
+  margin-right: 10px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: ${props => props.color ? props.color : 'transparent'};
+  box-shadow: 0px 0px 10px #888;
+`;

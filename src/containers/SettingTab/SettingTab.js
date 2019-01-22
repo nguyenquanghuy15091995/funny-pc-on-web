@@ -13,6 +13,7 @@ import {
 } from './constants';
 
 import DeviceInfo from './DeviceInfo';
+import CaseLeds from './CaseLeds';
 
 class SettingTab extends PureComponent {
   componentWillUnmount() {
@@ -21,7 +22,7 @@ class SettingTab extends PureComponent {
   }
 
   render() {
-    const { setting, doSelectSettingItem } = this.props;
+    const { setting, doSelectSettingItem, selectCaseLedColor } = this.props;
     return (
       <SettingTabContainer>
         <SettingMenu>
@@ -40,6 +41,7 @@ class SettingTab extends PureComponent {
         </SettingMenu>
         <SettingMenuContent>
           {SETTING_MENU_ITEMS.DEVICE_INFO.id === setting.settingItemId ? <DeviceInfo /> : null}
+          {SETTING_MENU_ITEMS.CASE_LEDS.id === setting.settingItemId ? <CaseLeds ledColor={setting.ledColor} selectCaseLedColor={selectCaseLedColor} /> : null}
         </SettingMenuContent>
       </SettingTabContainer>
     );

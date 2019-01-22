@@ -37,13 +37,13 @@ class Case extends PureComponent {
   }
 
   getLedColor = () => {
-    const { powerState } = this.props;
+    const { powerState, setting } = this.props;
     if (powerState === POWER_STATE.ON) {
-      return WHITE_LED.ON;
+      return setting.ledColor.ON;
     } else if (powerState === POWER_STATE.OFF) {
-      return WHITE_LED.OFF;
+      return setting.ledColor.OFF;
     }
-    return WHITE_LED.OFF;
+    return setting.ledColor.OFF;
   }
 
   handlePowerDown = () => {

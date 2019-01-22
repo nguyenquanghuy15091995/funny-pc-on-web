@@ -12,8 +12,9 @@ import {
   END_SHUT_DOWN,
   START_SHUT_DOWN,
   SELECT_SETTING_ITEM,
+  SELECT_CASE_LED_COLOR,
 } from './constants';
-import { SETTING_MENU_ITEMS } from '../SettingTab/constants';
+import { SETTING_MENU_ITEMS } from 'containers/SettingTab/constants';
 
 const initState = fromJS({
   os: {
@@ -23,10 +24,10 @@ const initState = fromJS({
   },
   setting: {
     ledColor: {
-      off: WHITE_LED.OFF,
-      on: WHITE_LED.ON,
+      OFF: WHITE_LED.OFF,
+      ON: WHITE_LED.ON,
     },
-    settingItemId: 1,
+    settingItemId: SETTING_MENU_ITEMS.DEVICE_INFO.id,
   },
 });
 
@@ -46,6 +47,8 @@ function globalReducer(state = initState, action) {
       return state.setIn(['os', 'shutingDown'], false);
     case SELECT_SETTING_ITEM:
       return state.setIn(['setting', 'settingItemId'], action.itemId);
+    case SELECT_CASE_LED_COLOR:
+      return state.setIn(['setting', 'ledColor'], action.ledColor);
     default:
       return state;
   }

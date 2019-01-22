@@ -9,9 +9,12 @@ import {
   showWelcome,
 } from 'containers/App/actions';
 import {
+  makeSelectSetting,
+} from 'containers/App/selectors';
+import {
   hideDesktop,
   showDesktop,
-} from '../Desktop/actions';
+} from 'containers/Desktop/actions';
 import Case from './Case';
 import {
   makeSelectPowerState,
@@ -23,6 +26,7 @@ import {
 
 const mapStateToProps = createStructuredSelector({
   powerState: makeSelectPowerState(),
+  setting: makeSelectSetting(),
 });
 
 function mapDispatchToProps(dispatch) {

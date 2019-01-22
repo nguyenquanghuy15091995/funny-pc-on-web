@@ -6,6 +6,7 @@ import {
   END_SHUT_DOWN,
   START_SHUT_DOWN,
   SELECT_SETTING_ITEM,
+  SELECT_CASE_LED_COLOR,
 } from './constants';
 
 export function loadOS() {
@@ -48,5 +49,12 @@ export function selectSettingItem(id) {
   return {
     type: SELECT_SETTING_ITEM,
     itemId: id,
+  };
+}
+
+export function selectCaseLed(color) {
+  return {
+    type: SELECT_CASE_LED_COLOR,
+    ledColor: color,
   };
 }
