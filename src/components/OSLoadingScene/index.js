@@ -19,6 +19,8 @@ const OSLoadingContainer = styled.div`
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  user-select: none;
+  cursor: none;
 `;
 
 const LabelAnimation = keyframes`

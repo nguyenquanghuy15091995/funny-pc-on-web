@@ -10,6 +10,8 @@ const ShutdownSceneContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  cursor: none;
 `;
 
 const ShutdownLabel = styled.span`

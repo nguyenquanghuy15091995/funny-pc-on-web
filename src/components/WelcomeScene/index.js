@@ -17,6 +17,8 @@ const WelcomeSceneContainer = styled.div`
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+  user-select: none;
+  cursor: none;
 `;
 
 const LabelAnimation = keyframes`

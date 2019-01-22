@@ -156,3 +156,43 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+const AppTabContainerAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export const AppTabContainerContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  animation-name: ${AppTabContainerAnimation};
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+`;
+
+export const AppTabItem = styled.div`
+  user-select: none;
+  margin: 10px 0px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  padding: 10px;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+`;

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const MonitorContainer = styled.div`
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@ export const MonitorMain = styled.div`
   position: relative;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 370px;
+  height: 470px;
   width: 100%;
 `;
 

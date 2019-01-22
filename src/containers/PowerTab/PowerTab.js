@@ -9,10 +9,6 @@ import {
   PowerItemLabel,
 } from 'components/PowerTabView';
 
-import {
-  MENU_ITEMS,
-} from 'containers/Desktop/constants';
-
 class PowerTab extends PureComponent {
   handleReset = () => {
     const {
@@ -31,7 +27,7 @@ class PowerTab extends PureComponent {
     setTimeout(() => {
       endShutdownPC();
       terminalOSPC();
-      selectMenuItemId(MENU_ITEMS.APPS.id);
+      selectMenuItemId(0);
       setTimeout(() => {
         loadOSPC();
         showWelcomeScene();
@@ -58,7 +54,7 @@ class PowerTab extends PureComponent {
       endShutdownPC();
       turnOffPC();
       terminalOSPC();
-      selectMenuItemId(MENU_ITEMS.APPS.id);
+      selectMenuItemId(0);
     }, 4000);
   }
 

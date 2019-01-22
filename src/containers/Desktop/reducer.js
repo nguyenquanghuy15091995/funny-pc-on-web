@@ -4,12 +4,11 @@ import {
   HIDE_DESKTOP,
   SHOW_DESKTOP,
   SELECT_MENU_ITEM,
-  MENU_ITEMS,
 } from './constants';
 
 const initState = fromJS({
   visible: false,
-  currentMenuItemId: MENU_ITEMS.APPS.id,
+  currentMenuItemId: 0,
 });
 
 function desktopReducer(state = initState, action) {

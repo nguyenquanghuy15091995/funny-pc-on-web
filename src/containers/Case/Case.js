@@ -4,8 +4,6 @@ import PowerIcon from 'icons/Power';
 import USBIcon from 'icons/USB';
 import FansIcon from 'icons/Fans';
 
-import { WHITE_LED } from 'utils/colors';
-
 import {
   TopCase,
   BottomCase,
