@@ -36,6 +36,7 @@ export const SoftwareContent = styled.div`
 `;
 
 export const SoftwareContentTop = styled.div`
+  top: 0;
   position: absolute;
   width: 100%;
   height: 30px;
@@ -63,4 +64,12 @@ export const ContentTopClose = styled.button`
   &:hover {
     background-color: rgba(255, 0, 0, 0.9);;
   }
+`;
+
+export const ContentMain = styled.div`
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  height: calc(100% - 30px);
+  position: relative;
 `;

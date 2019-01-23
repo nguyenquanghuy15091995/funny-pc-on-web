@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PaperIcon from 'icons/Paper';
-import GameJoy from 'icons/GameJoy'; 
+import GameJoy from 'icons/GameJoy';
 
 export const SOFTWARE_LIST = {
   TEXT_EDITOR: { id: 1, name: 'Text Editor', icon: <PaperIcon color="#FFF" size={50} /> },

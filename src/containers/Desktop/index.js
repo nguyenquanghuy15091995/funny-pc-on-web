@@ -12,12 +12,10 @@ import {
 } from './actions';
 
 import {
-  closeSoftware,
   openSoftware,
 } from 'containers/Software/actions';
 
 import {
-  makeSelectSoftwareId,
   makeSelectSoftwareVisible,
 } from 'containers/Software/selectors';
 

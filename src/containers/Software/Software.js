@@ -6,9 +6,12 @@ import {
   SoftwareContentTop,
   ContentTopLabel,
   ContentTopClose,
+  ContentMain,
 } from 'components/SoftwareView';
 
 import CloseIcon from 'icons/Close';
+
+import TextEditor from 'softwares/TextEditor';
 
 import {
   SOFTWARE_LIST,
@@ -22,6 +25,7 @@ class Software extends PureComponent {
       id: 0,
       name: '--Unknown--',
       icon: '',
+      softwareJSX: '',
     };
     return (
       <SoftwareContainer>
@@ -32,6 +36,9 @@ class Software extends PureComponent {
               <CloseIcon color="#FFF" size={14} />
             </ContentTopClose>
           </SoftwareContentTop>
+          <ContentMain>
+            {SOFTWARE_LIST.TEXT_EDITOR.id === currentSoftwareId ? <TextEditor /> : null}
+          </ContentMain>
         </SoftwareContent>
       </SoftwareContainer>
     );
