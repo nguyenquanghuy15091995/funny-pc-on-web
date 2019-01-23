@@ -2,7 +2,12 @@
   "name": "pc-simulator-on-web",
   "version": "0.1.0",
   "author": "Huy Nguyen (Edward)",
-  "keywords": ["pc-simulator", "react", "reactjs", "redux"],
+  "keywords": [
+    "pc-simulator",
+    "react",
+    "reactjs",
+    "redux"
+  ],
   "private": true,
   "dependencies": {
     "bootstrap": "^4.2.1",

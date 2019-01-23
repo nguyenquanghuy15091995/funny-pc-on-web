@@ -45,17 +45,19 @@ class Case extends PureComponent {
   }
 
   handlePowerDown = () => {
-    const { powerState, turnOffPC, terminalOSPC, hideWelcomeScene, hideDesktopScene } = this.props;
+    const { powerState, turnOffPC, terminalOSPC, hideWelcomeScene, hideDesktopScene, closeCurrentSoftware, selectMenuItemId } = this.props;
     if (powerState === POWER_STATE.ON) {
       this.powerPressTimer = setTimeout(() => {
         this.setState({
           isOff: true,
         }, () => {
+          closeCurrentSoftware();
           turnOffPC();
           clearTimeout(this.osLoadingTimer);
           terminalOSPC();
           hideWelcomeScene();
           hideDesktopScene();
+          selectMenuItemId(0);
         })
       }, 4000);
     }

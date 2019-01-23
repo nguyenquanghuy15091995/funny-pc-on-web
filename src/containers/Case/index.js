@@ -12,8 +12,12 @@ import {
   makeSelectSetting,
 } from 'containers/App/selectors';
 import {
+  closeSoftware,
+} from 'containers/Software/actions';
+import {
   hideDesktop,
   showDesktop,
+  selectMenuItem,
 } from 'containers/Desktop/actions';
 import Case from './Case';
 import {
@@ -24,6 +28,7 @@ import {
   turnOn,
 } from './actions';
 
+
 const mapStateToProps = createStructuredSelector({
   powerState: makeSelectPowerState(),
   setting: makeSelectSetting(),
@@ -31,6 +36,7 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
+    closeCurrentSoftware: bindActionCreators(closeSoftware, dispatch),
     turnOffPC: bindActionCreators(turnOff, dispatch),
     turnOnPC: bindActionCreators(turnOn, dispatch),
     loadOSPC: bindActionCreators(loadOS, dispatch),
@@ -39,6 +45,7 @@ function mapDispatchToProps(dispatch) {
     showWelcomeScene: bindActionCreators(showWelcome, dispatch),
     hideDesktopScene: bindActionCreators(hideDesktop, dispatch),
     showDesktopScene: bindActionCreators(showDesktop, dispatch),
+    selectMenuItemId: bindActionCreators(selectMenuItem, dispatch),
   };
 }
 
